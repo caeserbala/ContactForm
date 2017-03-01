@@ -1,0 +1,17 @@
+<div>
+  <ul>
+    <li *ngFor="let contact of contacts |async ">
+      {{contact.name.$value}}
+      {{contact.email.$value}}
+       {{contact.message.$value}}
+     
+    </li>
+  </ul>
+</div>
+ 
+<!--{{(contacts |async)?.name}} <br>
+{{(contacts |async)?.email}} <br>
+{{(contacts |async)?.message}} -->
+
+<button (click)= "onAdd()" > Add </button>
+
